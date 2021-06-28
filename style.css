@@ -422,10 +422,19 @@ body._touch .nav-list-item.active-arrow .sub-nav-list {
   transform: translate(0px, 0px);
   pointer-events: all;
 }
-
 body._touch .nav-list-item.active-arrow .nav-arrow{
   transform: rotate(-180deg);
 }
+body._touch .sub-list-item.active-arrow .second-sub-nav-list,
+body._touch .second-sub-list-item.active-arrow .third-sub-nav-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  pointer-events: all;  
+  display: block;
+}
+
+
 /* ------------------------------------- */
 
 /* -----------SECOND-SUB_NAV -------------*/
@@ -788,9 +797,9 @@ font-style: normal;
   .social-icon-list {
     display: none;
   }
-  /* .page {
+  .page {
       overflow:inherit; 
-  } */
+  }
   .popap {
       display: none;
   }
@@ -861,27 +870,64 @@ font-style: normal;
       flex-wrap: wrap;
       margin: 0 0 10px 0;
   }
-  .nav-list-item:last-child{
+  .nav-list-item:last-child {
       margin-bottom: 0;
   }
-  .sub-nav-list {
-      position: relative;   
-      flex: 1 1 100%;   
-      top: 0;
-      min-width: 150px;
-      margin: 5px 5px 5px 10px;
-      display: none;  
-  }   
-  .second-sub-list-item {
-    position: relative;   
-      flex: 1 1 100%;   
-      top: 0;
-      min-width: 150px;
-      margin: 5px 5px 5px 10px;
-      display: none;  
-  } 
   body._touch .nav-list-item.active-arrow .sub-nav-list  {
-      display: block;
+    display: block;
+  }
+
+  .sub-nav-list {
+    position: relative;   
+    flex: 1 1 100%;   
+    top: 0;
+    min-width: 150px;
+    margin: 5px 5px 5px 10px;
+    display: none;  
+  }   
+  .sub-list-item {
+    display: flex;
+    align-items: center;    
+    flex-wrap: wrap;
+  }
+  .sub-list-item a {
+    width: 90%;
+  }  
+  
+  .second-sub-nav-list {
+    position: relative;   
+    flex: 1 1 100%;   
+    top: 0;
+    left: 0;
+    min-width: 150px;
+    margin:0 auto;
+    background-color: #a15a13;
+    display: none;       
+  }
+  
+  
+  .second-sub-list-item {
+    display: flex;
+    align-items: center;    
+    flex-wrap: wrap;
+  }
+  .second-sub-list-item a {
+    width: 90%;
+  }  
+  .third-sub-list-item a {
+    width: 100%;
+    text-decoration: underline;
+  } 
+
+  .third-sub-nav-list {
+    position: relative;   
+    flex: 1 1 100%;   
+    top: 0;
+    left: 0;
+    min-width: 150px;
+    margin:0 auto;
+    background-color: #615e5a;
+    display: none;       
   }
 
 
